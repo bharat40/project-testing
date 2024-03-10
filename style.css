@@ -296,10 +296,6 @@ body {
   /* cursor: zoom-in; */
 }
 
-.aboutus-left:hover {
-  /* transform: scale(1.2); */
-}
-
 .aboutus-left span {
   font-size: 40px;
   text-decoration: underline;
