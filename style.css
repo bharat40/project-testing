@@ -39,21 +39,13 @@ body {
   color: black;
 }
 
-/* .header {
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 170px;
-} */
+
 
 .header h1 {
   font-size: 50px;
   font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
-  /* transition: all 1s linear 0ms;
-  animation-iteration-count: infinite; */
 }
 
 .logo-f {
@@ -64,15 +56,13 @@ body {
   color: rgb(134, 203, 31);
 }
 
-/* .header h1:hover {
-  transform: scale(1.2);
-} */
+
 
 .header ul li a:hover {
   color: white;
   background-color: green;
-  border-radius: 15px;
-  padding: 5px;
+  border-radius: 30px;
+  padding: 10px;
 }
 
 /*header section styling ends here (bharat dhiman)*/
@@ -122,54 +112,54 @@ body {
 .eat-right-food h1 {
   display: flex;
   font-size: 70px;
-  /* font-family: "Anton", sans-serif;
-  font-weight: 400;
-  font-style: normal; */
   font-family: "Pacifico", cursive;
   font-weight: 400;
   font-style: normal;
-  /* transition: all 0.3s linear 0ms; */
 }
 
 .nourish {
-  animation: animate1 1.2s linear infinite;
+  color:#ff9529;
 }
 
 .thrive {
-  animation: animate2 1.2s linear infinite;
+  color: blue;
 }
 
 .enjoy {
-  animation: animate3 1.2s linear infinite;
+  color: deeppink;
 }
 
-/* .nourish:hover {
-  color: red;
+.nourish {
+  animation: animate1 1.2s alternate infinite;
 }
 
-.thrive:hover {
-  color: yellowgreen;
+.thrive {
+  animation: animate2 1.2s alternate infinite;
 }
 
-.enjoy:hover {
-  color: blueviolet;
-} */
+.enjoy {
+  animation: animate3 1.2s alternate infinite;
+}
+
+.about-link {
+  color: white;
+}
 
 @keyframes animate1 {
-  0% {
+  50% {
     color: deeppink;
   }
 }
 
 @keyframes animate2 {
   50% {
-    color: greenyellow;
+    color: orange;
   }
 }
 
 @keyframes animate3 {
-  100% {
-    color: blue;
+  50% {
+    color: blueviolet;
   }
 }
 
@@ -250,7 +240,9 @@ body {
 @media (min-width: 1001px) {
   .header {
     background-color: #fdfcfb;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,36 +251,40 @@ body {
     z-index: 1;
     width: 100%;
     opacity: 0.9;
+    /* border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px; */
   }
 }
 
 /*about section styling starts from here (bharat dhiman)*/
 
 .about {
-  background-color: rgb(236, 236, 236);
+  /* background-color: rgb(236, 236, 236); */
+  background-image: url("./images/about-bgimage.avif");
+  background-position: center;
   height: 700px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
 .aboutus {
   display: flex;
-  gap: 150px;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
 .aboutus-left {
-  text-align: center;
+  text-align: start;
   height: 500px;
   width: 550px;
   display: flex;
   /* border: 1px solid black; */
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
   gap: 20px;
+  padding-left: 30px;
 
   /* box-shadow: inset -16px 0px 59px 57px rgba(0, 0, 0, 0.1); */
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
@@ -299,37 +295,35 @@ body {
 }
 
 .aboutus-left span {
-  font-size: 40px;
-  background-color: green;
-  border-radius: 40px;
-  padding: 10px;
-  color: white;
+  font-size: 70px;
+  color: yellow;
 }
 
-.aboutus-left h1 {
+/* .aboutus-left h1 {
   font-size: 40px;
   font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 .aboutus-left p {
   font-size: 20px;
   /* background-color: red; */
   line-height: 40px;
+  color: yellow;
   /* color: blue; */
   /* padding: 2px; */
   /* line-height: 30px;
   font-family: "Freehand", cursive;
   font-weight: 400;
   font-style: normal; */
-  background-color: #eeadf2;
+  /* background-color: #eeadf2;
   background-image: linear-gradient(
     45deg,
     #6cc947 0%,
     #43d57b 52%,
     #4ec581 90%
-  );
+  ); */
 }
 
 .aboutus-image-right img {
@@ -343,22 +337,25 @@ body {
 
 @media (max-width: 1000px) {
   .about {
-    height: 1400px;
+    padding-top: 50px;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 
-  .aboutus {
+  /* .aboutus {
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
+    flex-direction: column;
+    align-items: start;
+  } */
 
   .aboutus-left {
-    width: 350px;
+    width: 400px;
   }
 
   .aboutus-left span {
-    font-size: 15px;
+    font-size: 40px;
   }
 
   .aboutus-left h1 {
@@ -366,13 +363,13 @@ body {
   }
 
   .aboutus-left p {
-    font-size: 12px;
+    font-size: 20px;
   }
 
-  .aboutus-image-right img {
+  /* .aboutus-image-right img {
     height: 400px;
     width: 300px;
-  }
+  } */
 }
 
 /*bharat section styling done*/
